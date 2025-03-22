@@ -1,22 +1,22 @@
 {
-  "name": "phpbergen/202501",
-  "description": "PHP talk and demonstration",
+  "name": "phpbergen/202504-ddev",
+  "description": "How to use DDEV for local development",
   "homepage": "https://github.com/PHP-Bergen",
   "authors": [
     {
-      "name": "Stein Magne Bjørklund",
-      "email": "steinmb@smbjorklud.com"
+      "name": "Jørn Fauske",
+      "email": "jfauske@gmail.com"
     }
   ],
   "type": "project",
   "license": "MIT",
   "minimum-stability": "dev",
   "require": {
-    "php": ">=8.4"
+    "php": ">=8.3"
   },
   "config": {
     "platform": {
-      "php": "8.4"
+      "php": "8.3"
     }
   },
   "autoload": {
