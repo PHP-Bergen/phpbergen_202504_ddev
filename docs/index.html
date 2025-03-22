@@ -1,10 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>PHP Bergen</title>
-</head>
-<body>
-  <h1>PHP Bergen presentation template</h1>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>PHP Bergen - Meetup</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown>
+					<textarea data-template>
+						## Using DDEV for local development
+						![PHP Bergen logo](phpbergen.jpeg)  
+						23.04.2025 @jfauske
+						
+						---
+						* What is DDEV?
+						* Installation
+						* Basic use
+						* IDE plugins
+						* Customizing
+						* Addons
+						* Providers
+
+						---
+						## What is DDEV?
+
+						[ddev.com](https://ddev.com):
+						> Docker-based PHP development environments.
+						  
+						> Container superpowers with zero required Docker skills: environments in minutes, multiple concurrent projects, and less time to deployment. </blockquote>
+
+						---
+						## Installation
+						**Prerequisites**: A docker provider
+
+						#### Installing a docker provider
+						[Docker installation](https://ddev.readthedocs.io/en/stable/users/install/docker-installation/)
+						
+						#### Installing DDEV
+						[DDEV installation](https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/)
+
+						(Windows-users beware - additional steps may be required for `mkcert -install`)
+
+
+						---
+						## Basic use
+						* Configure
+						* Run commands
+						* Shutdown and cleanup
+
+						---
+						## IDE plugins
+						* PHPStorm - [DDEV Integration](https://plugins.jetbrains.com/plugin/18813-ddev-integration)
+						* VS Code - [DDEV Manager](https://marketplace.visualstudio.com/items?itemName=biati.ddev-manager)
+						---
+						## Customizing
+						* `.ddev/config.yaml`
+						* `.ddev/(apache|mysql|nginx)`
+						* `.ddev/(db|web)-build`
+						* `.ddev/web-entrypoint`
+						---
+						## Addons
+						#### Installing DDEV Addons
+						```sh
+						# List addons from DDEV (--all to get all in the registry).
+						ddev add-on list
+						# Install an addon
+						ddev add-on get <addon-name>
+						# Remove an addon
+						ddev add-on remove <addon-name>
+						```
+						#### Creating your own Addons
+						Instructions in the [DDEV addon template](https://github.com/ddev/ddev-addon-template).
+						---
+						## Providers
+					</textarea>					
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
 </html>
